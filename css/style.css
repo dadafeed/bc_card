@@ -581,7 +581,7 @@ sub-content .section2 .box::after {
 }
 
 .sub-content .section2 .sns {
-  display: inb;
+  display: inline-block;
   float: right;
 }
 
