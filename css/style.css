@@ -561,12 +561,12 @@ sub-content .section2 .box::after {
 }
 
 .sub-content .section2 .app li a {
-  display: inline-block;
+  display: block;
   font-size: 14px;
   font-weight: 500;
   color: #666;
   line-height: 24px;
-  padding: 0 20px 0 0;
+  margin: 0 20px 0 0;
   float: left;
 }
 
