@@ -549,7 +549,8 @@ sub-content .section2 .box::after {
   clear: both;
   float: left;
   width: 890px;
-  padding: 20px 30px;
+  height: 65px;
+  padding: 20px;
   background: #e6e6e6;
   margin: 10px 0 0 0;
 }
