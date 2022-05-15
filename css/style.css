@@ -554,11 +554,28 @@ sub-content .section2 .box::after {
   margin: 10px 0 0 0;
 }
 
+
 .sub-content .section2 .app-and-sns::after {
   content: "";
   display: block;
   clear: both;
 }
+
+.sub-content .section2 .app {
+  display: inline-block;
+  clear: both;
+}
+
+.sub-content .section2 .app li {
+  float: left;
+}
+
+.sub-content .section2 .app li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 
 .sub-content .section2 .app li a {
   display: block;
@@ -567,7 +584,7 @@ sub-content .section2 .box::after {
   color: #666;
   line-height: 24px;
   margin: 0 20px 0 0;
-  float: left;
+  /* float: left; */
 }
 
 .sub-content .section2 .app li a::before {
