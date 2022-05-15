@@ -566,7 +566,7 @@ sub-content .section2 .box::after {
   font-weight: 500;
   color: #666;
   line-height: 24px;
-  margin: 0 20px 0 0;
+  padding: 0 20px 0 0;
   float: left;
 }
 
