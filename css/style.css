@@ -111,22 +111,31 @@ header>.gnb-btm {
 }
 
 header>.gnb-btm>div {
-  margin: 0 auto;
-  padding: 0 10px;
+  width: 100%;
   position: relative;
+  clear: both;
 }
 
 header>.gnb-btm>div>.wrap-nav {
   width: 1200px;
+  height: 70px;
   margin: 0 auto;
+  padding: 0 10px;
+  clear: both;
 }
 
 .wrap-nav .lnb {
   box-sizing: border-box;
-  width: 900px;
+  height: 70px;
   text-align: center;
   font-size: 0;
-  position: relative;
+  float: left;
+}
+
+.wrap-nav .lnb::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .wrap-nav .lnb+div {
@@ -142,7 +151,7 @@ header>.gnb-btm>div>.wrap-nav {
 }
 
 .wrap-nav .lnb:hover+div {
-  height: 265px;
+  height: 275px;
   opacity: 1;
   border-bottom: 1px solid #eee;
 }
@@ -150,8 +159,6 @@ header>.gnb-btm>div>.wrap-nav {
 .wrap-nav .lnb .depth1 {
   display: inline-block;
   height: 70px;
-  overflow: hidden;
-  border-bottom: 1px solid #eee;
 }
 
 .wrap-nav .lnb .depth1:hover {
@@ -167,8 +174,8 @@ header>.gnb-btm>div>.wrap-nav {
 .wrap-nav .lnb .depth1>li>a {
   display: inline-block;
   width: 215px;
-  height: 71px;
-  line-height: 71px;
+  height: 70px;
+  line-height: 70px;
 }
 
 .wrap-nav .lnb .depth1>li>a>span {
@@ -254,16 +261,20 @@ header>.gnb-btm>div>.wrap-nav {
 }
 
 /* 검색창 */
-header .search-box {
+header .wrap-nav .search-box {
   height: 40px;
   line-height: 40px;
   border-radius: 40px;
   padding: 0;
   margin: 15px 0;
-  position: absolute;
-  top: 0;
-  right: 11%;
+  float: right;
   background: #f2f2f2;
+}
+
+header .wrap-nav .search-box::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 header .search-box form {
@@ -310,12 +321,45 @@ main {
 
 .visual .main-slide {
   width: 100%;
+  min-width: 1200px;
 }
 
-.visual .main-slide .swiper-slide {}
+.visual .main-slide .swiper-slide {
+  width: 100%;
+  height: 330px;
+}
 
-.visual .main-slide img {
-  width: auto;
+.visual .main-slide .swiper-slide>a {
+  display: block;
+}
+
+.visual .main-slide .swiper-slide>a>img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.visual .main-slide .swiper-slide>.mSlide1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 330px;
+  background: url('../src/images/main_visual1_220501.jpg') center/cover no-repeat;
+}
+
+.visual .main-slide .swiper-slide>.mSlide2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 330px;
+  background: url('../src/images/main_visual3_220501.jpg') center/cover no-repeat;
+}
+
+.visual .main-slide .swiper-slide>.mSlide3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 330px;
+  background: url('../src/images/main_visual4_220501.jpg') center/cover no-repeat;
 }
 
 .visual .controls {
@@ -323,7 +367,7 @@ main {
   left: 50%;
   padding: 0 30px;
   transform: translateX(-50%);
-  bottom: 25px;
+  bottom: 20px;
   z-index: 10;
 }
 
@@ -377,7 +421,7 @@ main {
   background: #fff;
   position: absolute;
   top: -290px;
-  left: 0;
+  right: 30px;
   z-index: 5;
   clear: both;
 }
@@ -408,7 +452,7 @@ main {
 }
 
 .main-content .top-box .inner-content p {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -585,7 +629,6 @@ sub-content .section2 .box::after {
   color: #666;
   line-height: 24px;
   margin: 0 20px 0 0;
-  /* float: left; */
 }
 
 .sub-content .section2 .app li a::before {
